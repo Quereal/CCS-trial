@@ -1,5 +1,5 @@
 <div class="select-control" (click)="toggleDropdown()" (mouseleave)="closeDropdown()">
-    <select class="select-control__fake-input" [attr.name]="name" [attr.id]="id" [(ngModel)]="value">
+    <select class="select-control__fake-input" [attr.name]="name" [(ngModel)]="value">
     </select>
     <div class="select-control__input" [ngClass]="{'focused' : isOpen}">
         {{ selectedOption ? selectedOption : placeholder }}

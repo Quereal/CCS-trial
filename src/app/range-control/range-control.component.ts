@@ -16,7 +16,6 @@ const RANGE_CONTROL_VALUE_ACCESSOR: Provider = {
 
 export class RangeControlComponent implements ControlValueAccessor {
     @Input() name?: string;
-    @Input() id?: string;
     sliderValue?: number;
     onChange: any = () => {};
     onTouched: any = () => {};

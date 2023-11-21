@@ -10,6 +10,10 @@ import { NgForm } from '@angular/forms';
 export class OrderFormComponent {
     model: any = {};
 
+    onFileSelected(file: File) {
+        this.model.file = file;
+    }
+
     onSubmit(form: NgForm) {
         if (form.valid) {
             console.log('Форма отправлена!', this.model);

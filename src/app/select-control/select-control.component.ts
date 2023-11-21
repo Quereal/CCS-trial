@@ -17,7 +17,6 @@ export class SelectControlComponent implements ControlValueAccessor {
     constructor(private _elementRef: ElementRef) {}
 
     @Input() name?: string;
-    @Input() id?: string;
     @Input() options: string[] = [];
     @Input() placeholder: string = '';
 

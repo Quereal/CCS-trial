@@ -3,7 +3,6 @@
         <app-select-control
             class="order-form__field"
             name="systemType"
-            id="system-type"
             placeholder="Выберите тип системы"
             [(ngModel)]="model.systemType"
             [options]="['Sed ut perspiciatis',
@@ -21,7 +20,6 @@
             type="text"
             class="order-form__field"
             name="email"
-            id="email"
             placeholder="Ваш e-mail"
             [(ngModel)]="model.email"
         >
@@ -29,25 +27,15 @@
             type="text"
             class="order-form__field"
             name="name"
-            id="name"
             placeholder="Ваше имя"
             [(ngModel)]="model.name"
         >
         <app-range-control
             class="order-form__field order-form__field_range"
             name="percent"
-            id="percent"
             [(ngModel)]="model.percent"
         ></app-range-control>
-        <label class="order-form__field order-form__file-upload" for="file-upload">
-            <input
-                type="file"
-                name="file-upload"
-                id="file-upload"
-                [(ngModel)]="model.file"
-            >
-            Прикрепить файл
-        </label>
+        <app-file-upload class="order-form__field" name="file" (fileSelected)="onFileSelected($event)"></app-file-upload>
         <app-button class="order-form__button" type="submit">
             Отправить
         </app-button>

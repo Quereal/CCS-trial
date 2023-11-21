@@ -1,0 +1,38 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.file-upload {
+    @include button-base;
+    @include button-secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: $semibold;
+    font-size: 15px;
+    gap: 10px;
+    padding: 10px 10px;
+    box-shadow: inset 0 0 0 2px $primary-color;
+    margin-bottom: 15px;
+
+    &:hover {
+        box-shadow: inset 0 0 0 2px $primary-color;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 0 2px;
+    }
+
+    &__icon {
+        min-width: 21px;
+        height: 21px;
+    }
+
+    &__label {
+        @include text-ellipsis(1);
+    }
+
+    &__size {
+        white-space: nowrap;
+    }
+}

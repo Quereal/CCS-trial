@@ -17,6 +17,7 @@ import { FooterContactsComponent } from './footer/footer-contacts/footer-contact
 import { FormsModule } from '@angular/forms';
 import { SelectControlComponent } from './select-control/select-control.component';
 import { RangeControlComponent } from './range-control/range-control.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RangeControlComponent } from './range-control/range-control.component';
     FooterPaymentsComponent,
     FooterContactsComponent,
     SelectControlComponent,
-    RangeControlComponent
+    RangeControlComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
