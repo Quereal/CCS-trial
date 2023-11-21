@@ -1,0 +1,14 @@
+<div class="order-icon-row">
+    <div class="order-icon-row__container">
+        <div class="order-icon-row__item"
+             *ngFor="let icon of icons; let last = last">
+            <div class="order-icon-row__icon-wrapper">
+                <img [src]="icon.url" [alt]="icon.name">
+                <div class="order-icon-row__dots-between" *ngIf="!last">
+                    <div class="order-icon-row__dot" *ngFor="let i of [1, 2, 3, 4, 5]"></div>
+                </div>
+            </div>
+            <p class="order-icon-row__icon-caption">{{icon.caption}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="footer-contacts">
+    <div class="footer-contacts__container">
+        <a *ngFor="let contact of contactList" class="footer-contacts__item" [href]="contact.link">
+            <img [src]="contact.icon" [alt]="contact.name">
+            {{contact.name}}
+        </a>
+    </div>
+</div>

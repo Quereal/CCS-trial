@@ -1,0 +1,72 @@
+@use '/src/styles/variables' as *;
+
+.header-menu {
+    &__container {
+        display: flex;
+        gap: $spacing-m;
+    }
+
+    &__item {
+        position: relative;
+        font-family: $semibold;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #FFF;
+        transition: color 0.1s ease-out, opacity 0.1s ease-out;
+        user-select: none;
+
+        &.selected {
+            color: $secondary-color;
+        }
+
+        &:not(.selected) {
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        // Увеличение области клика на $clickarea-expansion
+        &::before {
+            $clickarea-expansion: 10px;
+            content: "";
+            position: absolute;
+            top: -#{$clickarea-expansion};
+            bottom: -#{$clickarea-expansion};
+            left: -#{$clickarea-expansion};
+            right: -#{$clickarea-expansion};
+        }
+    }
+    
+    &__burger-icon {
+        font-family: $regular;
+        color: #FFF;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-menu {
+        &__container {
+            text-align: center;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(16, 16, 29, 0.90);
+            z-index: 2;
+            flex-direction: column;
+            gap: $spacing-s;
+            padding: $spacing-s 0;
+
+            &:not(.is-open) {
+                display: none;
+            }
+        }
+    
+        &__burger-icon {
+            display: block;
+        }
+    }
+}

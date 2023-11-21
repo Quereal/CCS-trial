@@ -1,0 +1,11 @@
+<menu class="header-menu">
+    <div class="header-menu__container" [ngClass]="{'is-open' : isMobileMenuOpen}">
+        <div *ngFor="let item of menuItems" class="header-menu__item"
+            [ngClass]="{ 'selected': selectedItem === item }" (click)="selectMenuItem(item)">
+            {{ item }}
+        </div>
+    </div>
+    <div class="header-menu__burger-icon" (click)="toggleMobileMenu()">
+        Меню
+    </div>
+</menu>

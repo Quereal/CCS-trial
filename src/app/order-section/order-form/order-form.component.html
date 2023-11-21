@@ -1,0 +1,55 @@
+<div class="order-form">
+    <form class="order-form__container" (ngSubmit)="onSubmit(orderForm)" #orderForm="ngForm">
+        <app-select-control
+            class="order-form__field"
+            name="systemType"
+            id="system-type"
+            placeholder="Выберите тип системы"
+            [(ngModel)]="model.systemType"
+            [options]="['Sed ut perspiciatis',
+                        'Nemo enim ipsam',
+                        'Et harum quidem',
+                        'Temporibus autem',
+                        'Itaque earum rerum',
+                        'Sed ut perspiciatis',
+                        'Nemo enim ipsam',
+                        'Et harum quidem',
+                        'Temporibus autem',
+                        'Itaque earum rerum']">
+        </app-select-control >
+        <input
+            type="text"
+            class="order-form__field"
+            name="email"
+            id="email"
+            placeholder="Ваш e-mail"
+            [(ngModel)]="model.email"
+        >
+        <input
+            type="text"
+            class="order-form__field"
+            name="name"
+            id="name"
+            placeholder="Ваше имя"
+            [(ngModel)]="model.name"
+        >
+        <app-range-control
+            class="order-form__field order-form__field_range"
+            name="percent"
+            id="percent"
+            [(ngModel)]="model.percent"
+        ></app-range-control>
+        <label class="order-form__field order-form__file-upload" for="file-upload">
+            <input
+                type="file"
+                name="file-upload"
+                id="file-upload"
+                [(ngModel)]="model.file"
+            >
+            Прикрепить файл
+        </label>
+        <app-button class="order-form__button" type="submit">
+            Отправить
+        </app-button>
+    </form>
+</div>

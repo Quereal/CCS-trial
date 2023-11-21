@@ -1,0 +1,41 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="text"] {
+    font-family: $regular;
+    font-size: 18px;
+    color: $input-text;
+    background-color: $input-bg;
+    padding: 10px;
+    box-shadow: $input-border;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.1s ease-out;
+
+    &::placeholder {
+        color: $input-text;
+    }
+
+    &:focus {
+        outline: none;
+        background-color: #FFF;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}

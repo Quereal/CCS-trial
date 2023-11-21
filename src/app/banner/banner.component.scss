@@ -1,0 +1,86 @@
+@use '/src/styles/variables' as *;
+
+.banner {
+    &__wrapper {
+        background-image: url('/assets/img/banner-bg.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 203px 0;
+    }
+
+    &__title {
+        font-family: $bold;
+        font-size: 48px;
+        text-transform: uppercase;
+        min-height: 125px;
+        margin-bottom: $spacing-l;
+        word-break: break-word;
+    }
+
+    &__title-accent {
+        color: $primary-color;
+    }
+
+    &__list {
+        font-size: 20px;
+        margin-bottom: $spacing-l;
+    }
+
+    &__list-title {
+        font-family: $bold;
+        margin-bottom: 10px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        font-family: $regular;
+        margin-bottom: 5px;
+    }
+
+    &__list-dash {
+        padding: 10px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: $spacing-s;
+    }
+
+    &__button {
+        width: 183px;
+        font-family: $regular;
+        font-size: 13px;
+        line-height: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        &__wrapper {
+            background: #FFF;
+            padding: 100px 0 $spacing-m;
+        }
+
+        &__title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: $spacing-s;
+        }
+
+        &__list {
+            font-size: 16px;
+            margin-bottom: $spacing-s;
+        }
+
+        &__actions {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        &__button {
+            width: 100%;
+        }
+    }
+}

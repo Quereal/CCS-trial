@@ -1,0 +1,65 @@
+@use './variables' as *;
+
+// Cокращение текста до заданного количества строк
+@mixin text-ellipsis($lines: 1) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+@mixin button-base {
+    font: inherit;
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    cursor: pointer;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+@mixin button-primary {
+    background-color: $btn-primary-bg;
+    color: $btn-primary-text;
+    box-shadow: $btn-primary-border;
+    transition: background-color 0.1s ease-out;
+
+    &:hover {
+        background-color: $btn-primary-hover-bg;
+    }
+
+    &:active {
+        background-color: $btn-primary-active-bg;
+    }
+}
+
+@mixin button-secondary {
+    background-color: $btn-secondary-bg;
+    color: $btn-secondary-text;
+    box-shadow: $btn-secondary-border;
+    transition: box-shadow 0.1s ease-out, color 0.1s ease-out;
+        
+    svg {
+        transition: fill 0.1s ease-out;
+        fill: $btn-secondary-text;
+    }
+
+    &:hover {
+        color: $btn-secondary-hover-text;
+        box-shadow: $btn-secondary-hover-border;
+
+        svg {
+            fill: $btn-secondary-hover-text;
+        }
+    }
+
+    &:active {
+        color: $btn-secondary-active-text;
+        box-shadow: $btn-secondary-active-border;
+
+        svg {
+            fill: $btn-secondary-active-text;
+        }
+    }
+}

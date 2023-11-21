@@ -1,0 +1,15 @@
+@use '/src/styles/variables' as *;
+
+.footer-payments {
+    &__container {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #C3C3C3;
+    }
+}

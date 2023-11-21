@@ -1,0 +1,9 @@
+<div class="range-control">
+    <div class="range-control__info">
+        <label class="range-control__label" [attr.for]="name">Sed ut perspiciatis, unde omnis iste natus</label>
+        <label class="range-control__value">{{sliderValue}} %</label>
+    </div>
+    <input type="range" class="range-control__input" [value]="sliderValue"
+        (input)="onRangeChange($event)"
+        [attr.name]="name" [attr.id]="id">
+</div>

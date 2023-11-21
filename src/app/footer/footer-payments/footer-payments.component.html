@@ -1,0 +1,8 @@
+<div class="footer-payments">
+    <div class="footer-payments__container">
+        <div *ngFor="let payment of paymentList" class="footer-payments__item">
+            <img [src]="payment.icon" [alt]="payment.name">
+            {{payment.name}}
+        </div>
+    </div>
+</div>

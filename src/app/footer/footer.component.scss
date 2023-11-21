@@ -1,0 +1,44 @@
+@use '/src/styles/variables' as *;
+
+.footer {
+    &__wrapper {
+        background-color: #3D4050;
+        padding: 30px;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        font-family: $regular;
+        font-size: 13px;
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__dash {
+        width: 1px;
+        height: 18px;
+        background-color: #C3C3C3;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        &__wrapper {
+            padding: 20px;
+        }
+        
+        &__content {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 30px;
+        }
+
+        &__dash {
+            display: none;
+        }
+    }
+}

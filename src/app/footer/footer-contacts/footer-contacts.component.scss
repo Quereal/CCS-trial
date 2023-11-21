@@ -1,0 +1,21 @@
+@use '/src/styles/variables' as *;
+
+.footer-contacts {
+    &__container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #FFF;
+        transition: color 0.1s ease-out;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
