@@ -39,10 +39,16 @@
         }
     }
     
-    &__burger-icon {
-        font-family: $regular;
-        color: #FFF;
+    &__menu-btn {
         display: none;
+    }
+
+    &__burger-line {
+        width: 20px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #FFF;
+        transition: background-color 0.1s ease-out;
     }
 }
 
@@ -65,8 +71,16 @@
             }
         }
     
-        &__burger-icon {
-            display: block;
+        &__menu-btn {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            &:active {
+                .header-menu__burger-line {
+                    background-color: $primary-color;
+                }
+            }
         }
     }
 }

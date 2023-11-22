@@ -5,7 +5,7 @@
             {{ item }}
         </div>
     </div>
-    <div class="header-menu__burger-icon" (click)="toggleMobileMenu()">
-        Меню
+    <div class="header-menu__menu-btn" (click)="toggleMobileMenu()">
+        <div class="header-menu__burger-line" *ngFor="let i of [1, 2, 3]"></div>
     </div>
 </menu>
