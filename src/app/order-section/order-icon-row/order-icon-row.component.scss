@@ -53,7 +53,7 @@
         &__container {
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px 20px;
+            gap: $spacing-s 20px;
         }
 
         &__item {
@@ -73,7 +73,7 @@
 @media screen and (max-width: 359px) {
     .order-icon-row {
         &__container {
-            gap: 30px
+            gap: $spacing-s
         }
         
         &__item {

@@ -3,7 +3,7 @@
 .footer {
     &__wrapper {
         background-color: #3D4050;
-        padding: 30px;
+        padding: $spacing-s;
     }
 
     &__content {
@@ -34,7 +34,7 @@
             display: flex;
             flex-direction: column-reverse;
             align-items: center;
-            gap: 30px;
+            gap: $spacing-s;
         }
 
         &__dash {

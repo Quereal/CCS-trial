@@ -10,6 +10,8 @@ $menu-item-color-active: $secondary-color;
 // Inputs
 $input-bg: rgba(255, 255, 255, 0.85);
 $input-border: inset 0 0 0 1px #FFF;
+$input-border-radius: 3px;
+$input-height: 48px;
 $input-padding: 12px 10px;
 $input-text: #272733;
 
@@ -17,7 +19,11 @@ $upload-input-bg: #FFF;
 $upload-input-border: inset 0 0 0 1px $primary-color;
 $upload-input-text: $input-text;
 
+$select-control-focus-border: inset 0 0 0 1px #3D4050;
+
 // Buttons
+$btn-border-radius: 4px;
+
 $btn-primary-bg: $primary-color;
 $btn-primary-border: inset 0 0 0 1px #FFF;
 $btn-primary-text: #FFF;
